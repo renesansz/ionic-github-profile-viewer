@@ -1,0 +1,20 @@
+<ion-view title="Profile" id="page2" class=" ">
+    <ion-content padding="true" class="has-header">
+        <div class="list card " id="profile-card22">
+            <ion-item class="item-avatar  " id="profile-list-item10">
+                <img ng-src="{{ user.avatar_url }}">
+                <h2>{{ user.name }}</h2>
+                <p>{{ user.bio }}</p>
+            </ion-item>
+            <div class="item item-body " id="profile-list-item-container3">
+                <p id="profile-markdown1" style="color:#000000;" class=" ">Email: {{ user.email }}</p>
+                <p id="profile-markdown2" style="color:#000000;" class=" ">Followers: {{ user.followers }}</p>
+                <p id="profile-markdown3" style="color:#000000;" class=" ">Following: {{ user.following }}</p>
+            </div>
+            <ion-item class="item-divider " id="profile-list-item-divider2">User Repositories</ion-item>
+            <ion-item class="item-icon-left balanced" id="profile-list-item12" ng-repeat="repo in repos">
+                <i class="icon ion-fork-repo"></i>{{ repo.full_name }}
+            </ion-item>
+        </div>
+    </ion-content>
+</ion-view>
