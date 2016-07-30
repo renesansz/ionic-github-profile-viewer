@@ -3,7 +3,7 @@
         <form id="search-form1" class="list ">
             <label class="item item-input">
                 <i class="icon ion-search placeholder-icon"></i>
-                <input type="search" placeholder="Search username" ng-model="search" ng-change="searchUser()">
+                <input type="search" placeholder="Search username" ng-model="searchStr" ng-model-options='{ debounce: 1000 }' ng-change="searchUser(searchStr)">
             </label>
         </form>
         <ion-list id="search-list3" class=" ">

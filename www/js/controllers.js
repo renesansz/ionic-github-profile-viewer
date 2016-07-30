@@ -3,15 +3,15 @@ angular.module('app.controllers', [])
 .controller('searchCtrl', function($scope, GithubProvider) {
 
     $scope.users = [];
-    $scope.search = '';
-    $scope.searchUser = function () {
+    $scope.searchStr = '';
+    $scope.searchUser = function (name) {
         GithubProvider
-            .fetchUser($scope.search)
+            .fetchUser(name)
             .then(function (res) {
                 $scope.users = res.data;
             });
     };
-    
+
     // Initialize
     $scope.searchUser();
 
